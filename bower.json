@@ -1,0 +1,21 @@
+{
+  "name": "frontend1",
+  "homepage": "https://github.com/deepaksabharwal2211/frontend",
+  "authors": [
+    "deepak sabharwal <deepak.sabharwal88@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.9.1"
+  }
+}
