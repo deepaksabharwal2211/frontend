@@ -1,0 +1,22 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "making new project here using bower- gulp or grunt - bootstrap and sass!!!!!",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepaksabharwal2211/frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deepaksabharwal2211/frontend/issues"
+  },
+  "homepage": "https://github.com/deepaksabharwal2211/frontend#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
