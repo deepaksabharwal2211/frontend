@@ -1,6 +1,53 @@
-$bg:#eee;
-body{
-	background-color:$bg;
-	* {margin:0;padding:0;font-size:15px;box-sizing:border-box;line-height:30px}
+$maxPop:640px;
+$minPop:480px;
+$Dark:#333;
+$Grey:#eee;
+
+body { 
+  background: url(../../images/laptop-bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Roboto Slab', serif;
 }
-.div{height: 10px;line-height:30px}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin transition($transtime, $lasttime) {
+  -webkit-transition: $transtime ease-in $lasttime ;
+     -moz-transition: $transtime ease-in $lasttime;
+      -ms-transition:$transtime ease-in $lasttime;
+          transition: $transtime ease-in $lasttime;
+}
+
+
+.centering-parent {
+  position: relative;z-index: -1;
+   .centered-child {
+  position: fixed;
+  max-width: $maxPop;
+  min-width:$minPop;
+  background:#ffffff;
+  top: 50%;
+  left: 50%;
+  padding:10px;
+  transform: translate(-50%, -50%);
+  @include transition(400ms,10ms);
+  @include border-radius(20px);
+  &:hover{
+  box-shadow:0 0 25px $Dark;
+   @include transition(400ms,10ms);
+  }
+}
+}
+
+.transparent-bg{
+	background:rgba(0,0,0,0.6);
+	padding:10px;
+	@include border-radius(10px);
+}
