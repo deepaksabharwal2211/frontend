@@ -4,6 +4,7 @@ var sass = require('gulp-sass');
 //const sass = require('gulp-ruby-sass');
 var cleanCSS = require('gulp-clean-css');
 // const autoprefixer = require('gulp-autoprefixer');
+const imagemin = require('gulp-imagemin');
 var concatCss = require('gulp-concat-css');
 var watch = require('gulp-watch'); 
  gulp.task('sass', function () {
@@ -11,6 +12,11 @@ var watch = require('gulp-watch');
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
      .pipe(gulp.dest('styles/css/'));
  });
+ gulp.task('img', () =>
+    gulp.src('images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('images/dev'))
+);
 // gulp.task('prefixer', () =>
 //     gulp.src('styles/style.css')
 //         .pipe(autoprefixer({
